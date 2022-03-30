@@ -1,6 +1,6 @@
 const db = require('./db.js');
-const helper = require('../helper');
-const config = require('../config');
+const helper = require('./helper');
+const config = require('./config');
 const bcrypt = require('bcryptjs/dist/bcrypt');
 
 async function getMultipleutilisateur(page = 1){
