@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const temps = require('../services/temps');
+const temps = require('./tempsservices');
 
 /* GET  */
 router.get('/', async function(req, res, next) {
