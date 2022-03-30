@@ -1,0 +1,46 @@
+const express = require('express');
+const router = express.Router();
+const vetements = require('../services/vetements');
+
+/* GET  */
+router.get('/', async function(req, res, next) {
+  try {
+    res.json(await vetements.getMultiplevetement(req.query.page));
+  } catch (err) {
+    console.error(`Error while getting vetements `, err.message);
+    next(err);
+  }
+});
+
+
+/* POST  */
+
+router.post('/', async function(req, res, next) {
+    try {
+      res.json(await vetements.createvetement(req.body));
+    } catch (err) {
+      console.error(`Error while creating vetement`, err.message);
+      next(err);
+    }
+  });
+  
+module.exports = router;
+/* PUT  */
+router.put('/:id', async function(req, res, next) {
+    try {
+      res.json(await vetements.updatevetement(req.params.id, req.body));
+    } catch (err) {
+      console.error(`Error while updating vetement`, err.message);
+      next(err);
+    }
+  });
+
+/* DELETE */
+router.delete('/:id', async function(req, res, next) {
+    try {
+      res.json(await vetements.removevetement(req.params.id));
+    } catch (err) {
+      console.error(`Error while deleting vetement`, err.message);
+      next(err);
+    }
+  });
