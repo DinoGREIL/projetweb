@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const utilisateurs = require('../services/utilisateurs');
+const utilisateurs = require('./utilisateursservices');
 const bcrypt=require('bcryptjs')
 
 /* GET  */
