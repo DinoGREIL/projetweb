@@ -11,18 +11,18 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-const loginRouter = require("./routes/login");
+const loginRouter = require("./loginroute");
 
-const utilisateursRouter = require("./routes/utilisateurs");
-const vetementsRouter = require("./routes/vetements");
-const tempsRouter= require("./routes/temps");
-const tenuesRouter= require("./routes/tenue");
-const styleRouter= require("./routes/style");
-const { createutilisateur, updateutilisateur, removeutilisateur } = require("./services/utilisateurs");
-const {createvetement, updatevetement,removevetement}= require("./services/vetements");
-const {createtemps,updatetemps,removetemps}=require("./services/temps");
-const {createtenue,updatetenue,removetenue}=require("./services/tenue");
-const {createstyle,updatestyle,removestyle}=require("./services/style");
+const utilisateursRouter = require("./utilisateursroute");
+const vetementsRouter = require("./vetementsroute");
+const tempsRouter= require("./tempsroute");
+const tenuesRouter= require("./tenueroute");
+const styleRouter= require("./styleroute");
+const { createutilisateur, updateutilisateur, removeutilisateur } = require("./utilisateursservices");
+const {createvetement, updatevetement,removevetement}= require("./vetementsservices");
+const {createtemps,updatetemps,removetemps}=require("./tempsservices");
+const {createtenue,updatetenue,removetenue}=require("./tenueservices");
+const {createstyle,updatestyle,removestyle}=require("./styleservices");
 app.use(express.json());
 app.use
 app.use(
