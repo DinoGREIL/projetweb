@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const vetements = require('../services/vetements');
+const vetements = require('./vetementsservices');
 
 /* GET  */
 router.get('/', async function(req, res, next) {
