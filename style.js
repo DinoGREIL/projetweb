@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const styles = require('../services/style');
+const styles = require('./styleservices');
 
 /* GET */
 router.get('/', async function(req, res, next) {
